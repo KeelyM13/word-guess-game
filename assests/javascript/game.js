@@ -3,13 +3,13 @@
 var words = ["magenta", "aquamarine", "silver", "teal", "crimson"];
 var wins = 0;
 var losses = 0;
-var guesses = 6;
+var guesses = 12;
 var lettersGuessed = [];
 
 //functions
 
 function resetGame() {
-guesses = 6;
+guesses = 12;
 lettersGuessed = [];
 document.querySelector("#guessed-letters").innerHTML=lettersGuessed;
 document.querySelector("#guesses-remaining").innerHTML=guesses;
@@ -34,7 +34,7 @@ document.onkeypress = function(event){
         resetGame();
 
         document.onkeyup = function(event) {
-            wordHolder = document.getElementById('placeholder');
+            wordHolder = document.getElementById('current-word');
             correct = document.createElement('ul');
           
             for (var i = 0; i < word.length; i++) {
